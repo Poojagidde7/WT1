@@ -1,0 +1,21 @@
+// script.js
+
+// Create a student object
+const student = {
+    name: "John Doe",
+    age: 21,
+    major: "Computer Science",
+    email: "johndoe@example.com",
+    displayInfo: function() {
+        return `Name: ${this.name}<br>Age: ${this.age}<br>Major: ${this.major}<br>Email: ${this.email}`;
+    }
+};
+
+// Function to display student information in the HTML page
+function displayStudentInfo() {
+    const studentInfoDiv = document.getElementById("student-info");
+    studentInfoDiv.innerHTML = student.displayInfo();
+}
+
+// Call the function to display student information
+displayStudentInfo();

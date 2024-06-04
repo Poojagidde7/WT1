@@ -1,0 +1,41 @@
+/* External CSS for XML styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.students {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.student {
+    margin-bottom: 20px;
+}
+
+.student:last-child {
+    margin-bottom: 0;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.age, .major, .email {
+    margin-left: 10px;
+    color: #555;
+}
+
+.email {
+    color: #007BFF;
+}

@@ -1,0 +1,40 @@
+// matrix.js
+function addMatrices(matrixA, matrixB) {
+    let result = [];
+    for (let i = 0; i < matrixA.length; i++) {
+        result[i] = [];
+        for (let j = 0; j < matrixA[i].length; j++) {
+            result[i][j] = matrixA[i][j] + matrixB[i][j];
+        }
+    }
+    return result;
+}
+
+function displayMatrix(matrix, elementId, matrixName) {
+    let matrixHtml = `<h2>${matrixName}</h2><table border="1">`;
+    for (let i = 0; i < matrix.length; i++) {
+        matrixHtml += "<tr>";
+        for (let j = 0; j < matrix[i].length; j++) {
+            matrixHtml += `<td>${matrix[i][j]}</td>`;
+        }
+        matrixHtml += "</tr>";
+    }
+    matrixHtml += "</table>";
+    document.getElementById(elementId).innerHTML = matrixHtml;
+}
+
+let matrixA = [
+    [1, 2],
+    [3, 4]
+];
+
+let matrixB = [
+    [5, 6],
+    [7, 8]
+];
+
+let resultMatrix = addMatrices(matrixA, matrixB);
+
+displayMatrix(matrixA, "matrixA", "Matrix A");
+displayMatrix(matrixB, "matrixB", "Matrix B");
+displayMatrix(resultMatrix, "resultMatrix", "Result of Matrix Addition");

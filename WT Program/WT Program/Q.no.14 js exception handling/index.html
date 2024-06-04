@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exception Handling</title>
+</head>
+<body>
+    <h1>Exception Handling in JavaScript</h1>
+    <p>Click the button to parse a JSON string.</p>
+    <button onclick="parseJson()">Parse JSON</button>
+    <div id="output"></div>
+
+    <script>
+        function parseJson() {
+            const jsonString = '{"name": "John Doe", "age": 30, "email": "johndoe@example.com"'; // Missing closing brace
+
+            try {
+                // Attempt to parse the JSON string
+                const parsedData = JSON.parse(jsonString);
+                document.getElementById("output").innerHTML = "Parsed JSON: " + JSON.stringify(parsedData);
+            } catch (error) {
+                // Handle any errors that occur during parsing
+                document.getElementById("output").innerHTML = "Error: " + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
